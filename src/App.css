@@ -1,38 +1,74 @@
-.App {
+@import url(//db.onlinewebfonts.com/c/0b51833ff62e4af8acb5fd3e2bf59e97?family=SF+Pro+Display);
+
+@font-face {font-family: "SF Pro Display"; src: url("//db.onlinewebfonts.com/t/0b51833ff62e4af8acb5fd3e2bf59e97.eot"); src: url("//db.onlinewebfonts.com/t/0b51833ff62e4af8acb5fd3e2bf59e97.eot?#iefix") format("embedded-opentype"), url("//db.onlinewebfonts.com/t/0b51833ff62e4af8acb5fd3e2bf59e97.woff2") format("woff2"), url("//db.onlinewebfonts.com/t/0b51833ff62e4af8acb5fd3e2bf59e97.woff") format("woff"), url("//db.onlinewebfonts.com/t/0b51833ff62e4af8acb5fd3e2bf59e97.ttf") format("truetype"), url("//db.onlinewebfonts.com/t/0b51833ff62e4af8acb5fd3e2bf59e97.svg#SF Pro Display") format("svg"); }
+
+#root {
+  font-family: "SF Pro Display";
+  background: linear-gradient(orange, rgb(228, 72, 98) ,rgb(248, 192, 255) );
+  color:rgb(252, 249, 250);
+}
+
+
+h1 {
+  background: linear-gradient(120deg,rgb(248, 192, 255), rgb(228, 72, 98), orange,  rgb(228, 72, 98) );
+  padding: 1em;
+  margin-top: 0;
+  font-size: 3em;
   text-align: center;
+  box-shadow: 0px 0.1em 0.2em  rgb(126, 39, 53);
+  
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+h2 {
+  font-size: 1.5em;
+  background: rgb(233, 23, 86);
+  padding: 0.5em;
+  box-shadow: 2px 2px 8px black;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+h3 {
+  font-size: 1em;
+  font-style: italic;
+  background: rgb(233, 23, 86);
+  padding: 0.5em;
+  box-shadow: 2px 2px 8px black;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+ol{
+  list-style: none;
+  counter-reset: my-awesome-counter;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  flex-direction: row;
+  flex-wrap: wrap;
 }
 
-.App-link {
-  color: #61dafb;
+ol li {
+  counter-increment: my-awesome-counter;
+  margin: 2em;
+  flex-basis: 25%;
+  background-color: coral;
+  padding: 1em;
+  border-radius: 10px;
+  box-shadow: 2px 2px 8px black;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+ol li::before {
+  content: counter(my-awesome-counter) ". ";
+  color:rgb(252, 249, 250);
+  font-weight: bold;
+  font-size: 2em;
+  background: rgb(233, 23, 86);
+  border-radius: 50%;
+  padding: 0.5em;
+  display: inline-block;
+  min-width: 1.5em;
+  max-width: 1.5em;
+  text-align: center;
+  margin: 1em;
+  box-shadow: 2px 2px 8px black;
+}
+
+img {
+  width: 100%;
+  box-shadow: 2px 2px 8px black;
 }
